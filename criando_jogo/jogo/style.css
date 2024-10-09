@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f5f5;
+}
+
+#game {
+  text-align: center;
+  background-color: #ffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#items {
+  margin: 20px 0;
+}
+
+.item {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: #d4e157;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+#bins {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bin {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeb3b;
+}
+
+#score {
+  margin-top: 20px;
+}
+
+#feedback-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: none; /* Inicia como invisível */
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#feedback-container.correct {
+  background-color: green;
+}
+
+#feedback-container.incorrect {
+  background-color: red;
+}
+
+/* bolhas */
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: bubble 5s linear infinite;
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 7s;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 5s;
+}
+
+.bubble:nth-child(3) {
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(4) {
+  left: 60%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(5) {
+  left: 75%;
+  width: 90px;
+  height: 90px;
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(6) {
+  left: 85%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 6s;
+}
+
+#game {
+  position: relative;
+  background-color: #87CEEB;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+/* som de fundo */
+#toggle-music {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Reciclagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Separe o Lixo!</h1>
+    <button id="toggle-music">Iniciar Música</button>
+    <div id="level-display">Nível: <span id="currentLevel">1</span></div>
+    <div id="items">
+     <!-- Itens de lixo para arrastar com imagens -->
+    <div class="item" draggable="true" id="papel">
+    <img src="papel.png" alt="Papel" width="50"> Papel
+    </div>
+    <div class="item" draggable="true" id="plastico">
+    <img src="plastico.png" alt="Plástico" width="30"> Plástico
+    </div>
+    <div class="item" draggable="true" id="vidro">
+    <img src="vidro.png" alt="Vidro" width="50"> Vidro
+    </div>
+    <div class="item" draggable="true" id="organico">
+    <img src="organico.png" alt="Orgânico" width="50"> Orgânico
+    </div>
+
+    <div id="bins">
+      <!-- Lixeiras -->
+      <div class="bin" id="papel-bin">Papel</div>
+      <div class="bin" id="plastico-bin">Plástico</div>
+      <div class="bin" id="vidro-bin">Vidro</div>
+      <div class="bin" id="organico-bin">Orgânico</div>
+    </div>
+    <div id="score">
+      <div id="feedback-container"></div>
+      <h2>Pontuação: <span id="points">0</span></h2>
+    <!-- Bolhas animadas -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  </div>
+
+  <!-- Elementos de áudio -->
+  <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+  <audio id="incorrect-sound" src="incorrect.mp3" preload="auto"></audio>
+
+  <audio id="background-music" loop>
+    <source src="sonfundo.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
